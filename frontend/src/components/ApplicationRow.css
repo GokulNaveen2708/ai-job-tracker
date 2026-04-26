@@ -3,19 +3,19 @@
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 16px 24px;
+  padding: 14px 20px;
   background: #fff;
-  border-bottom: 1px solid var(--border-light);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
   cursor: pointer;
-  transition: background var(--transition);
+  transition: all var(--transition);
 }
 
 .app-row:hover {
   background: var(--bg-secondary);
-}
-
-.app-row:last-child {
-  border-bottom: none;
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
 }
 
 .app-row--terminal {
@@ -28,14 +28,14 @@
 }
 
 .app-row__company {
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 0.95rem;
+  font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 4px;
 }
 
 .app-row__role {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--text-secondary);
   font-weight: 500;
 }

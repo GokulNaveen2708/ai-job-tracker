@@ -107,16 +107,13 @@
 .dashboard__list {
   display: flex;
   flex-direction: column;
-  background: #fff;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
-  overflow: hidden;
-  border: 1px solid var(--border-light);
+  background: transparent;
+  gap: 12px;
 }
 
 .dashboard__list .skeleton {
-  border-radius: 0;
-  border-bottom: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  margin-bottom: 12px;
 }
 
 

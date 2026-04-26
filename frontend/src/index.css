@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 /* ── Design Tokens ─────────────────────────────────────────────────── */
 :root {
-  --font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --bg-primary: #FFFFFF;
   --bg-secondary: #F9FAFB;
   --bg-card: #FFFFFF;
@@ -46,6 +46,15 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
+  /* Add subtle moving background pattern */
+  background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+  background-size: 24px 24px;
+  animation: moveGrid 30s linear infinite;
+}
+
+@keyframes moveGrid {
+  0% { background-position: 0 0; }
+  100% { background-position: 24px 24px; }
 }
 
 /* ── Animated Gradient Background ──────────────────────────────────── */

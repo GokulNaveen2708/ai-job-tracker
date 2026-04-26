@@ -39,16 +39,7 @@ export default function LoginPage({ configWarning }) {
       <div className="login-container">
         <div className="login-card">
           <div className="login-icon">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-              <rect width="48" height="48" rx="12" fill="url(#grad)" />
-              <path d="M14 24l6 6 14-14" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-              <defs>
-                <linearGradient id="grad" x1="0" y1="0" x2="48" y2="48">
-                  <stop stopColor="#34D399"/>
-                  <stop offset="1" stopColor="#FB923C"/>
-                </linearGradient>
-              </defs>
-            </svg>
+            <img src="/logo.png" alt="Logo" width="80" height="80" style={{ filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.1))' }} />
           </div>
 
           <h1 className="login-title">Job Tracker</h1>
