@@ -120,4 +120,4 @@ This project is configured for continuous deployment from GitHub.
    - Vercel will automatically build the React app and configure the SPA routing using the included `vercel.json`.
 
 ---
-*Built with ❤️ to make the job hunt slightly less painful.*
+*Built to make the job hunt slightly less painful.*
