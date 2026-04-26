@@ -16,10 +16,9 @@ export default function LoginPage({ configWarning }) {
       const result = await signInWithPopup(auth, googleProvider);
       const idToken = await result.user.getIdToken();
 
-      // Firebase popup gives us the Google OAuth access token directly
-      // (not an authorization code). Extract it from the credential.
-      const oauthAccessToken =
-        result._tokenResponse?.oauthAccessToken || null;
+      // Use the official Firebase method to extract the Google OAuth access token
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      const oauthAccessToken = credential?.accessToken || null;
 
       if (idToken) {
         try {
