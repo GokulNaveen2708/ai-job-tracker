@@ -1,6 +1,6 @@
 import { auth } from "./firebase";
 
-const BASE_URL = import.meta.env.VITE_BACKEND_URL;
+const BASE_URL = import.meta.env.VITE_BACKEND_URL || "https://job-tracker-backend-r59g.onrender.com";
 
 async function authFetch(path, options = {}) {
   const token = await auth.currentUser?.getIdToken();
