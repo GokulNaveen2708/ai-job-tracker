@@ -7,6 +7,12 @@
 
 <br />
 
+<div align="center">
+  <img src="./demo.jpeg" alt="Job Tracker Dashboard" width="800" />
+</div>
+
+<br />
+
 ## ✨ Features
 
 - **Automated Gmail Syncing**: Simply sign in with Google, and the system uses the Gmail API (and History API for incremental syncs) to automatically find job-related emails.
