@@ -1,0 +1,136 @@
+.app-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px 24px;
+  background: #fff;
+  border-bottom: 1px solid var(--border-light);
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.app-row:hover {
+  background: var(--bg-secondary);
+}
+
+.app-row:last-child {
+  border-bottom: none;
+}
+
+.app-row--terminal {
+  opacity: 0.7;
+}
+
+.app-row__info {
+  flex: 1;
+  min-width: 200px;
+}
+
+.app-row__company {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.app-row__role {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.app-row__pipeline {
+  flex: 2;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+}
+
+/* Progress Pipeline */
+.app-row__progress {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.progress-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.progress-step__bar {
+  height: 6px;
+  background: var(--border-light);
+  border-radius: 4px;
+  transition: background var(--transition);
+}
+
+.progress-step--filled .progress-step__bar {
+  background: linear-gradient(90deg, var(--green-start), var(--green-end));
+}
+
+.progress-step__label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.progress-step--filled .progress-step__label {
+  color: var(--text-primary);
+}
+
+.app-row__terminal-badge {
+  padding: 6px 12px;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.app-row__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  width: 120px;
+}
+
+.app-row__time {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.app-row__actions {
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.app-row:hover .app-row__actions {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .app-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .app-row__actions {
+    opacity: 1;
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .app-row__meta {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

@@ -1,0 +1,37 @@
+.override-modal__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.override-modal__subtitle {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.override-modal__field {
+  margin-bottom: 14px;
+}
+
+.override-modal__label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 5px;
+}
+
+.override-modal__error {
+  color: var(--red);
+  font-size: 0.8rem;
+  margin-bottom: 12px;
+}
+
+.override-modal__actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}

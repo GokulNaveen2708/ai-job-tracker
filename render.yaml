@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: job-tracker-backend
+    env: docker
+    region: oregon
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    envVars:
+      - key: CORS_ORIGINS
+        value: '["*"]'
+      - key: SYNC_MAX_BURST
+        value: '2'
+      - key: SYNC_COOLDOWN_SECONDS
+        value: '300'
+      # The following must be added manually in the Render Dashboard:
+      # - FIREBASE_PROJECT_ID
+      # - GEMINI_API_KEY
+      # - FIREBASE_SERVICE_ACCOUNT_JSON (copy the entire contents of firebase-sa.json here)
