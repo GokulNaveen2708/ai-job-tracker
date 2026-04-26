@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>🚀 Agentic Job Application Tracker</h1>
+  <h1>🚀 JobSync: Agentic Job Application Tracker</h1>
   <p><strong>AI-powered dashboard that reads your Gmail, classifies emails with Gemini 2.5, and automatically tracks your job hunt progress.</strong></p>
   
   [![Live Demo](https://img.shields.io/badge/Live%20Demo-ai--job--tracker--black.vercel.app-10B981?style=for-the-badge&logo=vercel)](https://ai-job-tracker-black.vercel.app)
@@ -8,7 +8,7 @@
 <br />
 
 <div align="center">
-  <img src="./demo.jpeg" alt="Job Tracker Dashboard" width="800" />
+  <img src="./demo.jpeg" alt="JobSync Dashboard" width="800" />
 </div>
 
 <br />

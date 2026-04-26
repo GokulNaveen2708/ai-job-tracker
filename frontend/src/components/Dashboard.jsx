@@ -79,7 +79,7 @@ export default function Dashboard({ user }) {
         <div className="dashboard__header-left">
           <h1 className="dashboard__title">
             <img src="/logo.png" alt="Logo" className="dashboard__logo-img" width="32" height="32" />
-            Job Tracker
+            JobSync
           </h1>
         </div>
         <div className="dashboard__header-right">

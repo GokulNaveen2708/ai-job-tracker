@@ -42,7 +42,7 @@ export default function LoginPage({ configWarning }) {
             <img src="/logo.png" alt="Logo" width="80" height="80" style={{ filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.1))' }} />
           </div>
 
-          <h1 className="login-title">Job Tracker</h1>
+          <h1 className="login-title">JobSync</h1>
           <p className="login-subtitle">
             AI-powered job application tracking.<br />
             Connect your Gmail and let Claude organize your job hunt.
