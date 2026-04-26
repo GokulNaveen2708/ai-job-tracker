@@ -1,8 +1,9 @@
+import { auth } from "./firebase";
+
 const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
 async function authFetch(path, options = {}) {
-  const { getAuth } = await import("firebase/auth");
-  const token = await getAuth().currentUser?.getIdToken();
+  const token = await auth.currentUser?.getIdToken();
   if (!token) throw new Error("Not authenticated");
 
   const res = await fetch(`${BASE_URL}${path}`, {
