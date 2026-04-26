@@ -21,15 +21,12 @@ export default function LoginPage({ configWarning }) {
       const oauthAccessToken = credential?.accessToken || null;
 
       if (idToken) {
-        try {
-          await authCallback(idToken, oauthAccessToken);
-        } catch (backendErr) {
-          console.warn("Backend auth callback failed:", backendErr.message);
-          // Continue anyway - user is authenticated via Firebase
-        }
+        // If this fails, it will be caught by the outer catch block and shown on screen
+        await authCallback(idToken, oauthAccessToken);
       }
     } catch (err) {
       if (err.code !== "auth/popup-closed-by-user") {
+        alert("LOGIN ERROR: " + err.message);
         setError(err.message);
       }
     } finally {

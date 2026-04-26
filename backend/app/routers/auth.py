@@ -95,6 +95,25 @@ async def auth_callback(body: AuthCallbackRequest):
             detail="No access token available. Please sign in again."
         )
 
+    # Validate that the token actually has the Gmail scope
+    try:
+        async with httpx.AsyncClient() as client:
+            token_info_res = await client.get(f"https://oauth2.googleapis.com/tokeninfo?access_token={access_token}")
+            if token_info_res.status_code == 200:
+                token_info = token_info_res.json()
+                scopes = token_info.get("scope", "")
+                if "https://www.googleapis.com/auth/gmail.readonly" not in scopes:
+                    raise HTTPException(
+                        status_code=403,
+                        detail="Gmail permission missing! When signing in, you MUST check the box to allow Job Tracker to read your emails."
+                    )
+            else:
+                logger.warning(f"Failed to validate token info: {token_info_res.text}")
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.warning(f"Error checking token scopes: {e}")
+
     # Preserve existing refresh token if we have one
     if not refresh_token:
         existing_user = await get_user(uid)
